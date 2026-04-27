@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
-import readline
 import sys
+try:
+    import readline  # noqa: F401
+except ImportError:
+    pass
 from lexer import lex
 from parser import parse
 from executor import execute
